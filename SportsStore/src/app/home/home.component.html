@@ -1,0 +1,70 @@
+<!-- navbar  ----------------------start --->
+<nav class="navbar  navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">STORE HOME</a>
+      <!--<button class="btn btn-sm  bg-dark text-white" (click)="toAdmin()">  --->
+      <button class="btn btn-sm  bg-dark text-white"  
+      (click)="toAdmin()">>
+          <i class="fa fa-user" aria-hidden="true"></i>
+          Admin
+      </button>  
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+      </form>   
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+<!-- navbar  ----------------------end --->
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to store!</h1>
+    <p>store is an online eCommerce portal used to find and buy an item online. 
+      Buyer can add items to the cart, checkout and perform other operations. 
+      Admin can blockunblock Seller, Buyer, selling items. Below are eMart Features in detail.</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">about more &raquo;</a></p>
+  </div>
+</div>
+
+<div class="container">
+  <!----------------- row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Sign in</h2>
+      <p>If you want to know about the product, and you have an account,please sign in! </p>
+      <form class="form-inline mt-2 mt-md-0">  
+        <button  class="btn btn-success btn-lg" style="text-shadow: black 5px 3px 3px;"
+        type="submit" (click)="signIn()">
+        <span class="glyphicon glyphicon-user"></span> Sign in</button>
+      </form>
+
+    </div>
+    <div class="col-md-4">
+      <h2>BuyerSignup</h2>
+      <p>If you are a buyer, and If you don't have an account, please register here first! </p>
+       <!--<p><a class="btn btn-default" href="#" role="button">buyerSignup &raquo;</a></p>-->
+       <button type="button" class="btn btn-primary btn-lg" style="text-shadow: black 5px 3px 3px;"
+       (click)="buyerSignUp()">
+        <span class="glyphicon glyphicon-user"></span> buyerSignup
+      </button>
+   </div>
+    <div class="col-md-4">
+      <h2>SellerSignUp</h2>
+      <p>If you are a seller, and If you don't have an account, please register here first!</p>
+      <!--<p><a class="btn btn-default" href="#" role="button">SellerSignUp &raquo;</a></p>-->
+       <button type="button" class="btn btn-primary btn-lg" style="text-shadow: black 5px 3px 3px;"
+       (click)="sellerSignUp()">
+        <span class="glyphicon glyphicon-user"></span> SellerSignUp
+      </button>
+    </div>
+  </div>
+  
+  <hr>
+<!-- footer  ----------------------start --->
+  <footer>
+    <p>&copy; 2020 Company, Inc.</p>
+  </footer>
+<!-- footer  ----------------------end --->
+</div> <!-- /container -->

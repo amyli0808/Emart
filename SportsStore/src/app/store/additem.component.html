@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col bg-dark text-white">
+        <a class="navbar-brand">STORE-ADDITEM</a>
+      </div>
+    </div>
+  </div> 
+
+  <div *ngIf="itemSent" class="m-2 text-center">
+    <h2>The item is update!</h2>
+    <button class="btn btn-primary" routerLink="/store">Return to Store</button>
+  </div>
+  <form *ngIf="!itemSent" #form="ngForm" novalidate
+        (ngSubmit)="submitProduct(form)" class="m-2">
+    <div class="form-group">
+      <label>Productname</label>
+      <input class="form-control" #name="ngModel" name="name"
+              [(ngModel)]="product.name" required />
+              
+      <span *ngIf="submitted && name.invalid" class="text-danger">
+        Please enter your productname
+      </span>
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <input class="form-control" #address="ngModel" name="address"
+              [(ngModel)]="product.category" required />
+      <span *ngIf="submitted && address.invalid" class="text-danger">
+        Please enter your Category
+      </span>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input class="form-control" #city="ngModel" name="city"
+              [(ngModel)]="product.description" required />
+      <span *ngIf="submitted && city.invalid" class="text-danger">
+        Please enter your description
+      </span>
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input class="form-control" #state="ngModel" name="state"
+              [(ngModel)]="product.price" required />
+      <span *ngIf="submitted && state.invalid" class="text-danger">
+        Please enter your price
+      </span>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-secondary m-1" routerLink="/store">Back</button>
+      <button class="btn btn-primary m-1" type="submit">Save item</button>
+    </div>
+  </form>
+  

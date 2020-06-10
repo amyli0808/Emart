@@ -1,0 +1,36 @@
+<!-- navbar  ----------------------start --->
+<nav class="navbar  navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">STORE</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+      </form>   
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+<!-- navbar  ----------------------end --->
+
+
+<div class="div-signup-seller">
+    <!-- -->
+    <form class="form-signup-seller"  novalidate>
+      <h1 class="h3 mb-3 font-weight-normal">Please sign up(seller)</h1>
+      <!-- bootstrap utilities/screenreaders   -->
+      <label for="inputUsername" class="sr-only">User name</label>
+      <input  id="inputUsername" class="form-control" placeholder="UserName" type="text">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input  type="password" id="inputPassword" class="form-control" placeholder="Password" >
+      <label for="inputCompanyname" class="sr-only">Companyname</label>
+      <input  id="inputCompanyname" class="form-control" placeholder="Companyname" type="text">  
+      <label for="inputMobile" class="sr-only">Mobile number</label>
+      <input  id="inputMobile" class="form-control" placeholder="Mobilenumber" type="text">  
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input  type="email" id="inputEmail" class="form-control" placeholder="Email" >
+      <button class="btn btn-lg btn-primary btn-block" type="submit"
+      (click)="toSignin()"
+      >Sign Up</button>
+  
+    </form>
+  </div>

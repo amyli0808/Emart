@@ -1,0 +1,26 @@
+server:
+   port: 8761
+eureka:
+   instance:
+      # Service refresh time configuration. The heartbeat will be active every other time. The default is 30s
+      lease-renewal-interval-in-seconds: 5
+      # Service expiration time configuration. If no heartbeat is received beyond this time, eurekaserver will reject this instance
+      # Note that eurekaserver must be set eureka.server.eviction -Interval timer in MS otherwise, this configuration is invalid, 
+      # which is generally three times the service refresh time configuration
+      # Default 90s
+      lease-expiration-duration-in-seconds: 15
+   server:
+      ####Turn off self-protection mechanism
+      enable-self-preservation: false
+      # Default180s
+      # Since evict is enabled, it is not necessary to change this configuration
+      response-cache-auto-expiration-in-seconds: 60
+      # Active failure is enabled and the detection interval of each active failure is 3s
+      eviction-interval-timer-in-ms: 10000
+   client:
+      registerWithEureka: false
+      fetchRegistry: false
+      serviceUrl: 
+         defaultZone: http://localhost:8761/eureka/
+#   server:
+#      waitTimeInMsWhenSyncEmpty: 5

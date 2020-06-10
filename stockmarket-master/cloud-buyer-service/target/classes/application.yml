@@ -1,0 +1,39 @@
+server:
+   port: 8082
+spring:
+   application:
+      name: cloud-buyer-service
+   profiles:
+      active: default
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/emart?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: mysqlroot
+   jpa:
+      hibernate:
+         database-platform: org.hibernate.dialect.MySQLDialect
+         ddl-auto: update
+         show-sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        
+eureka:
+   instance:
+      preferIpAddress: true   #
+      client: 
+         registerWithEureka: true #
+         fetchRegistry: true    #
+         serviceUrl: 
+            defaultZone: http://localhost:8761/eureka/
+#
+security:
+   oauth2:
+      resource:
+         id: producer-service
+         #
+         user-info-uri: https://localhost:8901/auth/user
+         prefer-token-info: false
